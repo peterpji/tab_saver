@@ -1,0 +1,13 @@
+{
+    "name": "Tab saver",
+    "description": "Helps saving browser tabs to bookmarks.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs",
+        "bookmarks"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
