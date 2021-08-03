@@ -1,6 +1,6 @@
 const getTabs = async () => {
-  const tabQuery = await chrome.tabs.query({});
-  return tabQuery;
+  const windowQuery = await chrome.windows.getCurrent({populate: true});
+  return windowQuery.tabs;
 };
 
 const messageUser = (message) => {
