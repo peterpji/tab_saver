@@ -54,9 +54,21 @@ const addSaveTabsButtonFunctionality = () => {
   button.addEventListener('click', buttonFunc);
 };
 
+const listenForEnter = () => {
+  const inputElem = document.getElementById('folderName');
+
+  inputElem.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      buttonFunc();
+    }
+  });
+};
+
 const main = () => {
   console.log('Running main');
   addSaveTabsButtonFunctionality();
+  listenForEnter();
 };
 
 main();
